@@ -827,7 +827,7 @@ a{
 
 /* start container special products */
 
-.first-container-for-common-style , .second-container-for-common-style {
+.first-container-for-common-style , .second-container-for-common-style , .total-container-essential-plugins-to-increase-sales {
 	padding-bottom: 95px;
 }
 
@@ -1511,11 +1511,11 @@ a{
 	border-top-color: hsla(0,0%,93.7%,.17);
 } 
 
-.second-container-for-common-style .container-sales-information__sales-details span:first-child , .total-container-the-hottest-page-builder-plugins .container-sales-information__sales-details span:first-child {
+.second-container-for-common-style .container-sales-information__sales-details span:first-child ,.first-container-for-common-style:not(:nth-child(2)) .container-sales-information__sales-details span:first-child {
 	font-size: 1rem;
 }
 
-.second-container-for-common-style .container-sales-information__sales-details div:not(:last-child) span:first-child , .total-container-the-hottest-page-builder-plugins .container-sales-information__sales-details div:not(:last-child) span:first-child {
+.second-container-for-common-style .container-sales-information__sales-details div:not(:last-child) span:first-child , .first-container-for-common-style:not(:nth-child(2)) .container-sales-information__sales-details div:not(:last-child) span:first-child {
 	font-weight: bold;
 	display: block;
 	text-align: center;
@@ -1537,7 +1537,7 @@ a{
 
 /* start container the hottest page builder plugins */
 
-.total-container-the-hottest-page-builder-plugins{
+.total-container-the-hottest-page-builder-plugins , .total-container-essential-plugins-to-increase-sales{
 	margin-top: 50px;
 }
 
@@ -1545,7 +1545,7 @@ a{
     margin: 0 10px 0 0;
 }
 
-.total-container-the-hottest-page-builder-plugins .container-common-product__left__see-all a{
+.total-container-the-hottest-page-builder-plugins .container-common-product__left__see-all a , .total-container-essential-plugins-to-increase-sales .container-common-product__left__see-all a{
 	display: none;
 }
 
@@ -2357,8 +2357,9 @@ a{
 		margin: 20px 0;
 	}
 
-	.total-container-the-hottest-page-builder-plugins .container-common__product__title h2{
+	.total-container-the-hottest-page-builder-plugins .container-common__product__title h2 , .total-container-essential-plugins-to-increase-sales h2 , .total-container-the-best-multi-selling-templates-of-the-week h2{
 		font-size: .95rem ;
+		line-height: 25px;
 	}
 
 }
