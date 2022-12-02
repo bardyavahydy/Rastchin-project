@@ -61,6 +61,8 @@ table {
 	--color-4d : #4d535b ;
 	--color-bf : #bfc5ca ;
 	--color-6d : #6d6d6d ;
+	--color-53 : #53565d ;
+	--color-bb : #bbbcbe ;
 	--color-a2 : #a2a6ab ;
 	--color-a4 : #a4a4a4 ;
     --bg-color : #363d4d ;
@@ -165,10 +167,6 @@ a{
 	width: 300px;
 	overflow: scroll;
 	transition: .3s;
-}
-
-.container-menu-hamburger__lines:hover + .container-side-bar-menus{
-	right: 300px;
 }
 
 .container-side-bar-menus__logo-img{
@@ -1358,13 +1356,13 @@ a{
 	border-radius: var(--radius);
 }
 
-.container-latest-products-title__container-left__nine-to-square {
+.container-latest-products-title__container-left__nine-to-square , .container-newest-blog-post__nine-to-square {
 	display: grid;
 	grid-template-columns: repeat(3 , 1fr);
 	gap: 2px;
 }
 
-.container-latest-products-title__container-left__nine-to-square div{
+.container-latest-products-title__container-left__nine-to-square div , .container-newest-blog-post__nine-to-square div{
 	background-color: var(--bgColor-c9);
 	width: 4px;
 	height: 4px;
@@ -1700,7 +1698,7 @@ a{
 	display: none;
 }
 
-.total-container-selected-designer-of-the-week .container-common__show-products{
+.total-container-selected-designer-of-the-week .container-common__show-products , .container-newest-blog-posts{
 	display: grid;
 	grid-template-columns: repeat(4 , 1fr);
 	gap: 30px;
@@ -1817,6 +1815,102 @@ a{
 
 /* finish selected designer of the week */
 
+/* start newest-blog-posts */
+ 
+.container-newest-blog-posts{
+	margin-top: 20px;
+}
+
+.container-newest-blog-post{
+	background-color: #fff;
+	box-shadow: 0 0 10px hsl(0deg 0% 75% / 35%);
+    border-radius: var(--radius);
+	padding: 20px;
+}
+
+.container-newest-blog-post__container-img{
+	background-color: #fafafa;
+	padding: 10px 0;
+	border-radius: var(--radius);
+	transition: .4s;
+}
+
+.container-newest-blog-post__container-img img{
+	width: 100%;
+	border-radius: var(--radius);
+}
+
+.container-newest-blog-post:hover .container-newest-blog-post__container-img{
+	transform: scale(1.1);
+}
+
+.container-newest-blog-post__title-link{
+	font-size: .86rem;
+	font-weight: bolder;
+	color: var(--color-53);
+	display: block;
+	margin: 20px 0 10px;
+    line-height: 32px;
+	word-spacing: -4px;
+}
+
+.container-newest-blog-post__description{
+	color: var(--color-8e9);
+	font-size: .81rem;
+	line-height: 1.44rem;
+	text-align: justify;
+}
+
+.container-newest-blog-post__container-Comments{
+	display: flex;
+	justify-content: space-between;
+	border-top: 1px dashed rgba(187,188,190,.25);
+    padding-top: 18px;
+	margin-top: 10px;
+}
+
+.container-check{
+	display: flex;
+	align-items: center;
+}
+
+.container-check .container-newest-blog-post__nine-to-square div{
+	transition: .4s;
+}
+
+.container-check:hover .container-newest-blog-post__nine-to-square div{
+	background-color: var(--base-color);
+}
+
+.container-check span{
+	transition: .4s;
+	color: var(--color-bb);
+    font-size: .81rem ;
+	margin-right: .5rem;
+	display: inline-block;
+	width: 5.9rem;
+	line-height: 1.1rem;
+}
+
+.container-check:hover span  , .container-point-of-view:hover .fa-comment-o , .container-point-of-view:hover span{
+	color: var(--base-color);
+}
+
+.fa-comment-o{
+	color: var(--color-8e9);
+	font-size: 1rem;
+    margin-left: .18rem;
+	transition: .4s;
+}
+
+.container-point-of-view span{
+	color: var(--color-8e9);
+	font-size: .94rem;
+	transition: .4s;
+}
+
+/* finish newest-blog-posts */
+
 @keyframes slider-show{
 	0% , 16%{
 		transform: translateX(0);
@@ -1867,25 +1961,6 @@ a{
 
 }
 
-@media (max-width : 1225px){
-	.container-Offers{
-		flex-wrap: wrap;
-		justify-content: space-between;
-	}
-
-	.container-Offer{
-		width: 48%;
-	}
-
-	.container-Offer:nth-child(2){
-		margin: 0 ;
-	}
-
-	.container-Offer:nth-child(3){
-		margin-top: 30px ;
-	}
-}
-
 @media (max-width : 1288px){
 	.container-common-product__left{
 		display: none;
@@ -1916,11 +1991,34 @@ a{
 	.container-sell-and-favorite__container-favorite {
 		margin-right: 15px;
 	}
+
+	.container-newest-blog-post__title-link{
+		height: 4rem;
+	}
 }
 
 @media (max-width : 1233px){
 	.slider-show-AddToBasket, .slider-show-preview {
 		padding: 10px 6px;
+	}
+}
+
+@media (max-width : 1225px){
+	.container-Offers{
+		flex-wrap: wrap;
+		justify-content: space-between;
+	}
+
+	.container-Offer{
+		width: 48%;
+	}
+
+	.container-Offer:nth-child(2){
+		margin: 0 ;
+	}
+
+	.container-Offer:nth-child(3){
+		margin-top: 30px ;
 	}
 }
 
@@ -1936,6 +2034,10 @@ a{
 
 	.container-menu-hamburger{
 		display: block;
+	}
+
+	.container-menu-hamburger__lines:hover + .container-side-bar-menus{
+		right: 0;
 	}
 
 	.container-navigation-bar{
@@ -2044,7 +2146,7 @@ a{
 		margin: 12px 0 40px;
 	}
 
-	.container-new-products .container-common__show-products , .total-container-selected-designer-of-the-week .container-common__show-products{
+	.container-new-products .container-common__show-products , .total-container-selected-designer-of-the-week .container-common__show-products , .container-newest-blog-posts{
 		grid-template-columns: repeat( 3 , 1fr);
 	}
 
@@ -2199,7 +2301,7 @@ a{
 		display: block;
 	}
 
-	.container-new-products .container-common__show-products , .total-container-selected-designer-of-the-week .container-common__show-products{
+	.container-new-products .container-common__show-products , .total-container-selected-designer-of-the-week .container-common__show-products , .container-newest-blog-posts{
 		grid-template-columns: repeat( 2 , 1fr);
 		gap: 30px;
 	}
@@ -2254,6 +2356,18 @@ a{
 
 	.container-design-all-products {
 		margin: 98px auto 0;
+	}
+
+	.total-container-newest-blog-posts .container-common-product__left__see-all{
+		display: none;
+	}
+
+	.container-newest-blog-post__title-link {
+		height: fit-content;
+	}
+
+	.container-newest-blog-post__description {
+		height: 5.8rem;
 	}
 }
 
@@ -2356,7 +2470,7 @@ a{
 		margin-left: 0;
 	}
 
-	.container-new-products .container-common__show-products , .total-container-selected-designer-of-the-week .container-common__show-products{
+	.container-new-products .container-common__show-products , .total-container-selected-designer-of-the-week .container-common__show-products , .container-newest-blog-posts{
 		grid-template-columns: 1fr;
 		row-gap: 30px;
 		column-gap: 0;
@@ -2397,6 +2511,14 @@ a{
 
 	.container-design-all-products , .container-design-all-products__btn {
 		width: 100%;
+	}
+
+	.container-newest-blog-post__description {
+		height: fit-content;
+	}
+
+	.container-check span{
+		width: fit-content;
 	}
 }
 
@@ -2710,6 +2832,10 @@ a{
 
 	.container-design-all-products {
 		margin: 55px auto 0;
+	}
+
+	.container-check span {
+		width: 5.9rem;
 	}
 }
 
