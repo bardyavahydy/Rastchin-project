@@ -62,6 +62,7 @@ table {
 	--color-bf : #bfc5ca ;
 	--color-6d : #6d6d6d ;
 	--color-a2 : #a2a6ab ;
+	--color-a4 : #a4a4a4 ;
     --bg-color : #363d4d ;
 	--bgColor-f1 : #f1f1f1 ;
 	--bgColor-f8 : #f8f9fa ;
@@ -1521,12 +1522,6 @@ a{
 	text-align: center;
 }
 
-/* .second-container-for-common-style .container-sales-information__sales-details span:last-child{
-	display: block;
-	text-align: center; 
-	margin-top: 10px;
-} */
-
 .second-container-for-common-style .preview {
     background-color: rgba(0,0,0,.1) ;
 }
@@ -1691,6 +1686,137 @@ a{
 
 /* finish offers */
 
+/* start selected designer of the week */
+
+.total-container-selected-designer-of-the-week .container-common__show-products::before{
+	display: none;
+}
+
+.total-container-selected-designer-of-the-week .container-common-product__title__img{
+	background-color: #e0f9cd;
+}
+
+.total-container-selected-designer-of-the-week .container-common-product__left{
+	display: none;
+}
+
+.total-container-selected-designer-of-the-week .container-common__show-products{
+	display: grid;
+	grid-template-columns: repeat(4 , 1fr);
+	gap: 30px;
+	overflow: visible;
+}
+
+.total-container-selected-designer-of-the-week .container-show-product{
+	margin: 0;
+	width: 100%;
+}
+
+.container-show-product--total-container-for-design{
+	padding: 30px 30px 36px;
+}
+
+.container-design-img-and-title{
+	display: flex;
+	align-items: center;
+	margin-bottom: 40px;
+}
+
+.container-design-img-and-title__container-img{
+	width: 120px;
+	height: 120px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	box-shadow : 0 2px 25px rgba(119,132,157,.1);
+}
+
+.container-design-img-and-title__container-img img{
+	width: 61px;
+	height: 61px;
+}
+
+.container-design-img-and-title__container-title{
+	margin-right: 22px;
+}
+
+.container-design-img-and-title__container-title h4{
+	margin-bottom: 26px;
+	font: 500 1.25rem 'dana','IranianSans','Tahoma','serif';
+	color: var(--link-color);
+}
+
+.container-design-img-and-title__container-title h6{
+	direction: ltr;
+	font-size: .88rem;
+	color: var(--color-a4);
+	font-weight: 700;
+}
+
+.container-sell-and-favorite{
+	margin: 0 25px;
+	padding: 25px 0;
+    border-top: 1px dashed var(--color-ef);
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+
+.container-sell-and-favorite__container-sell {
+	padding-left: 25px;
+	border-left: 1px solid var(--color-ef);
+}
+
+.container-sell-and-favorite span{
+	display: block;
+	text-align: center;
+}
+
+.container-sell-and-favorite__container-sell span:first-child{
+	color: var(--yellow-color);
+	font: 700 1.88rem 'IranianSansBold',dana,Tahoma;
+}
+
+.container-sell-and-favorite__container-sell span:last-child , .container-sell-and-favorite__container-favorite span:last-child{
+	font-size: 1.3rem;
+    color: hsla(0,0%,42.7%,.8);
+	margin-top: 15px;
+}
+
+.container-sell-and-favorite__container-favorite{
+	margin-right: 27px;
+}
+
+.container-sell-and-favorite__container-favorite span:first-child{
+	color: var(--base-color);
+	font: 700 1.88rem 'IranianSansBold',dana,Tahoma;
+}
+
+.total-container-selected-designer-of-the-week.first-container-for-common-style .container-sales-information__sales-details span:first-child {
+    font-size: 1.25rem;
+}
+
+.container-design-all-products{
+	width: fit-content;
+	margin: 20px auto 0;
+}
+
+.container-design-all-products__btn{
+	border: none;
+	outline: none;
+	border-radius: var(--radius);
+	background-color: var(--bgColor-f8);
+}
+
+.container-design-all-products__btn a{
+	display: block;
+	padding: 10px 8px;
+	color: var(--color-a2);
+	font: .88rem 'IranianSans';
+}
+
+/* finish selected designer of the week */
+
 @keyframes slider-show{
 	0% , 16%{
 		transform: translateX(0);
@@ -1781,6 +1907,14 @@ a{
 		display: block;
 		text-align: center;
 		margin: 5px 0 0 0 ;
+	}
+
+	.container-sell-and-favorite__container-sell {
+		padding-left: 15px;
+	}
+
+	.container-sell-and-favorite__container-favorite {
+		margin-right: 15px;
 	}
 }
 
@@ -1910,45 +2044,53 @@ a{
 		margin: 12px 0 40px;
 	}
 
-	.container-new-products .container-common__show-products{
+	.container-new-products .container-common__show-products , .total-container-selected-designer-of-the-week .container-common__show-products{
 		grid-template-columns: repeat( 3 , 1fr);
 	}
 
-	.container-new-products .container-show-product{
+	.container-new-products .container-show-product , .total-container-selected-designer-of-the-week .container-show-product{
 		height: 410px;
 	}
 
-	.container-new-products .container-show-product__container-sales-information {
+	.container-new-products .container-show-product__container-sales-information , .total-container-selected-designer-of-the-week .container-show-product__container-sales-information{
 		top: 309px;
 	}
 
-	.container-new-products .container-show-product:hover .container-show-product__container-sales-information {
+	.container-new-products .container-show-product:hover .container-show-product__container-sales-information , .total-container-selected-designer-of-the-week .container-show-product:hover .container-show-product__container-sales-information{
 		top: 230px;
 	}
 
-	.container-new-products .shopping-cart {
+	.container-sell-and-favorite__container-sell {
+		padding-left: 25px;
+	}
+
+	.container-sell-and-favorite__container-favorite {
+		margin-right: 27px;
+	}
+
+	.container-new-products .shopping-cart , .total-container-selected-designer-of-the-week .shopping-cart{
 		padding: 0 14px;
 	}
 	
-	.container-new-products .container-show-product:hover .shopping-cart{
+	.container-new-products .container-show-product:hover .shopping-cart , .total-container-selected-designer-of-the-week .container-show-product:hover .shopping-cart{
 		padding: 12px 14px;
 	}
 
-	.container-new-products .preview {
+	.container-new-products .preview , .total-container-selected-designer-of-the-week .preview{
 		padding: 0 16px;
 	}
 	
-	.container-new-products .container-show-product:hover .preview{
+	.container-new-products .container-show-product:hover .preview , .total-container-selected-designer-of-the-week .container-show-product:hover .preview{
 		padding: 12px 16px;
 	}
-
-	/* .second-container-for-common-style .container-show-product{
-		height: 450px;
-	} */
 
 	.container-page-builders .second-container{
 		grid-template-columns: repeat(4 , 1fr);
 		gap: 20px;
+	}
+
+	.total-container-selected-designer-of-the-week .container-show-product h1{
+		height: 56px;
 	}
 
 }
@@ -2057,12 +2199,12 @@ a{
 		display: block;
 	}
 
-	.container-new-products .container-common__show-products{
+	.container-new-products .container-common__show-products , .total-container-selected-designer-of-the-week .container-common__show-products{
 		grid-template-columns: repeat( 2 , 1fr);
 		gap: 30px;
 	}
 
-	.container-new-products .container-show-product{
+	.container-new-products .container-show-product {
 		height: 472px;
 	}
 
@@ -2074,13 +2216,9 @@ a{
 		top: 305px;
 	}
 
-	.container-new-products .shopping-cart , .container-new-products .container-show-product:hover .shopping-cart , .container-new-products .preview ,.container-new-products .container-show-product:hover .preview{
+	.container-new-products .shopping-cart , .container-new-products .container-show-product:hover .shopping-cart , .container-new-products .preview ,.container-new-products .container-show-product:hover .preview , .total-container-selected-designer-of-the-week .shopping-cart , .total-container-selected-designer-of-the-week .container-show-product:hover .shopping-cart , .total-container-selected-designer-of-the-week .preview , .total-container-selected-designer-of-the-week .container-show-product:hover .preview{
 		padding: 12px 18px;
 	}
-
-	/* .second-container-for-common-style .container-show-product{
-		height: 492px;
-	} */
 
 	.container-page-builders .second-container{
 		grid-template-columns: repeat(3 , 1fr);
@@ -2100,6 +2238,22 @@ a{
 
 	.container-Offer:nth-child(3){
 		margin-top: 0 ;
+	}
+
+	.total-container-selected-designer-of-the-week .container-show-product{
+		height: 485px;
+	}
+
+	.total-container-selected-designer-of-the-week .container-show-product__container-sales-information , .total-container-selected-designer-of-the-week .container-show-product:hover .container-show-product__container-sales-information { 
+		top: 311px;
+	}
+
+	.container-sell-and-favorite {
+		justify-content: center;
+	}
+
+	.container-design-all-products {
+		margin: 98px auto 0;
 	}
 }
 
@@ -2145,11 +2299,11 @@ a{
 		top: 326px;
 	}
 
-	.percentage-like span:first-child , .percentage-like span:first-child{
+	.percentage-like span:first-child , .sales-number span:first-child , .total-container-selected-designer-of-the-week.first-container-for-common-style .container-sales-information__sales-details div:not(:last-child) span:first-child{
 		font-size: 1.13rem;
 	}
 
-	.price span:first-child {
+	.price span:first-child , .total-container-selected-designer-of-the-week.first-container-for-common-style .price span:first-child  {
 		font-size: 1rem;
 	}
 
@@ -2202,35 +2356,47 @@ a{
 		margin-left: 0;
 	}
 
-	.container-new-products .container-common__show-products{
+	.container-new-products .container-common__show-products , .total-container-selected-designer-of-the-week .container-common__show-products{
 		grid-template-columns: 1fr;
 		row-gap: 30px;
 		column-gap: 0;
 	}
 
-	.container-new-products .container-show-product{
+	.container-new-products .container-show-product {
 		height: 535px;
 	}
 
-	.container-new-products .container-show-product__container-sales-information , .container-new-products .container-show-product:hover .container-show-product__container-sales-information { 
+	.container-new-products .container-show-product__container-sales-information , .container-new-products .container-show-product:hover .container-show-product__container-sales-information , .total-container-selected-designer-of-the-week .container-show-product__container-sales-information , .total-container-selected-designer-of-the-week .container-show-product:hover .container-show-product__container-sales-information{ 
 		top: 373px;
 	}
 
-	.container-new-products .shopping-cart {
+	.total-container-selected-designer-of-the-week .container-show-product h1 {
+		height: fit-content;
+	}
+
+	.container-new-products .shopping-cart , .total-container-selected-designer-of-the-week .shopping-cart{
 		flex-grow: 1;
 		margin-left: 15px;
 	}
 
-	.container-new-products .preview {
+	.container-new-products .preview , .total-container-selected-designer-of-the-week .preview{
 		flex-grow: .5;
 	}
 
-	/* .second-container-for-common-style .container-show-product{
-		height: 516px;
-	} */
-
 	.container-page-builders .second-container{
 		grid-template-columns: repeat(2 , 1fr);
+	}
+
+	.total-container-selected-designer-of-the-week .container-show-product{
+		height: 548px;
+	}
+
+	.container-show-product.container-show-product--total-container-for-design{
+		height: fit-content;
+	}
+
+	.container-design-all-products , .container-design-all-products__btn {
+		width: 100%;
 	}
 }
 
@@ -2284,13 +2450,10 @@ a{
 		padding: 33px 15px 20px;
 	}
 
-	.container-page-builders{
+	.container-page-builders , .total-container-Offers {
 		padding: 0 15px;
 	}
 
-	.total-container-Offers{
-		padding: 0 15px;
-	}
 }
 
 @media (max-width:550px){
@@ -2325,14 +2488,6 @@ a{
 	.shopping-cart a, .preview a {
 		font-size: .85rem;
 	}
-
-	/* .second-container-for-common-style .container-show-product{
-		height: 535px;
-	} */
-
-	/* .second-container-for-common-style .container-show-product__container-sales-information , .second-container-for-common-style .container-show-product:hover .container-show-product__container-sales-information{
-		top: 342px;
-	} */
 }
 
 @media (max-width:509px){
@@ -2416,21 +2571,13 @@ a{
 		height: 457px;
 	}
 
-	.container-new-products .container-show-product__container-sales-information , .container-new-products .container-show-product:hover .container-show-product__container-sales-information { 
+	.container-new-products .container-show-product__container-sales-information , .container-new-products .container-show-product:hover .container-show-product__container-sales-information{ 
 		top: 295px;
 	}
 
 	.second-container-for-common-style{
 		padding: 40px 0 20px;
 	}
-
-	/* .second-container-for-common-style .container-show-product{
-		height: 505px;
-	} */
-
-	/* .second-container-for-common-style .container-show-product__container-sales-information , .second-container-for-common-style .container-show-product:hover .container-show-product__container-sales-information{
-		top: 312px;
-	} */
 
 	.container-page-builders .second-container{
 		grid-template-columns: .75fr;
@@ -2445,6 +2592,14 @@ a{
 
 	.container-Offer__total-container-link__description{
 		font-size: .75rem;
+	}
+
+	.total-container-selected-designer-of-the-week .container-show-product{
+		height: 475px;
+	}
+
+	.total-container-selected-designer-of-the-week .container-show-product__container-sales-information , .total-container-selected-designer-of-the-week .container-show-product:hover .container-show-product__container-sales-information { 
+		top: 306px;
 	}
 }
 
@@ -2528,24 +2683,33 @@ a{
 		justify-content: space-between;
 	}
 
-	.container-new-products .shopping-cart {
+	.container-new-products .shopping-cart , .total-container-selected-designer-of-the-week .shopping-cart {
 		margin-left: 0;
 	}
 
-	.container-new-products .container-show-product{
+	.container-new-products .container-show-product {
 		height: 512px;
 	}
 
-	/* .second-container-for-common-style .container-show-product{
-		height: 565px;
-	}
-
-	.second-container-for-common-style .container-show-product__container-sales-information , .second-container-for-common-style .container-show-product:hover .container-show-product__container-sales-information{
-		top: 310px;
-	} */
-
 	.container-Offer__total-container-link__description{
 		line-height: 23px;
+	}
+
+	.total-container-selected-designer-of-the-week .container-show-product{
+		height: 528px;
+	}
+
+	.container-design-img-and-title{
+		flex-direction: column;
+	}
+
+	.container-design-img-and-title__container-title {
+		margin-right: 0;
+		margin-top: 20px;
+	}
+
+	.container-design-all-products {
+		margin: 55px auto 0;
 	}
 }
 
