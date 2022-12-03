@@ -61,6 +61,8 @@ table {
 	--color-4d : #4d535b ;
 	--color-bf : #bfc5ca ;
 	--color-6d : #6d6d6d ;
+	--color-8c : #8c8c8c ;
+	--color-f9 : #f9f9f9 ;
 	--color-53 : #53565d ;
 	--color-bb : #bbbcbe ;
 	--color-a2 : #a2a6ab ;
@@ -1940,7 +1942,90 @@ a{
 	font-size: .88rem;
     color: var(--color-8e9);
 }
+
 /* finish widgets */
+
+/* start footer */
+
+footer{
+    box-shadow: 0 10px 50px rgb(173 188 200 / 22%);
+}
+
+.container-footer-top{
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: .94rem .94rem 0;
+}
+
+.container-footer-top__container-menus{
+	display: flex;
+	align-items: center;
+	width: 66.6%;
+}
+
+.container-footer-menu{
+	text-align: center;
+	box-shadow: 6px 0 14px -18px #707070;
+	padding: 0 15px;
+	margin-top: 2.2rem;
+	width: 27%;
+}
+
+.container-footer-menu h6{
+	font: 600 1.13rem Dana,Tahoma,sans-serif;
+    color: var(--color-53);
+	margin-bottom: .5rem;
+}
+
+.container-footer-menu li{
+	margin: 1.1rem 0;
+}
+
+.container-footer-menu a{
+	color: var(--color-8c);
+	font-size: .94rem;
+}
+
+.container-footer-top__total-container-left{
+	box-shadow: 2px 0 25px 0 rgb(145 159 167 / 30%);
+    border-radius: 0 0 var(--radius) var(--radius);
+	background-color: #fff;
+}
+
+.container-footer-top__total-container-left__container-top{
+	padding: 25px 25px 20px;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.container-footer-top__total-container-left__container-top p{
+	color: #212529;
+    font: 400 .94rem 'IranianSans',Tahoma;
+}
+
+.container-footer-top__total-container-left__container-top a{
+	background-color: var(--base-color);
+    color: #fff;
+    font: .94rem Dana,Tahoma,sans-serif;
+    display: inline-block;
+    padding: .75rem 1.5rem;
+    border-radius: .2rem;
+}
+
+.container-footer-top__total-container-left__container-bottom{
+	background-color: var(--color-f9);
+	padding: 1.7rem;
+}
+
+.container-footer-top__total-container-left__container-bottom p{
+	color: #6d6d6d;
+    font: 1rem Dana,Tahoma,sans-serif;
+	text-align: center;
+}
+
+/* finish footer */
 
 @keyframes slider-show{
 	0% , 16%{
@@ -1988,6 +2073,10 @@ a{
 
 	.container-show-product:hover .container-show-product__container-sales-information{
 		top: 235px;
+	}
+
+	.container-footer-top{
+		padding: .94rem 2.5rem 0;
 	}
 
 }
@@ -2224,6 +2313,21 @@ a{
 
 	.total-container-selected-designer-of-the-week .container-show-product h1{
 		height: 56px;
+	}
+
+	.container-footer-top{
+		flex-direction: column;
+		align-items: flex-start;
+		padding: 0 ;
+	}
+
+	.container-footer-top__container-menus , .container-footer-top__total-container-left{
+		width: 100%;
+	}
+
+	.container-footer-menu {
+		margin : 2rem 0 1.25rem;
+		box-shadow: none;
 	}
 
 }
@@ -2567,6 +2671,18 @@ a{
 	.container-check span{
 		width: fit-content;
 	}
+
+	.container-footer-top__container-menus {
+		flex-wrap: wrap;
+	}
+
+	.container-footer-menu{
+		width: 50%;
+	}
+
+	.container-footer-menu:last-of-type {
+		margin: 0 0 1.25rem;
+	}
 }
 
 @media (max-width : 575px){
@@ -2619,8 +2735,21 @@ a{
 		padding: 33px 15px 20px;
 	}
 
-	.container-page-builders , .total-container-Offers {
+	.container-page-builders , .total-container-Offers , footer {
 		padding: 0 15px;
+	}
+
+	.container-footer-menu {
+		width: 100%;
+	}
+
+	.container-footer-menu:nth-child(2) {
+		margin: 0 0 1.25rem;
+	}
+
+	.container-footer-top__total-container-left {
+		width: calc(100% - 3rem);
+		margin: 0 1.5rem;
 	}
 
 }
@@ -2688,8 +2817,12 @@ a{
 }
 
 @media (max-width : 480px){
-	.container , .second-container , main > .second-container:nth-child(4) , .container-latest-products-title__second-container-mid{
+	.container , .second-container {
 		max-width: 360px;
+	}
+
+	.second-container , main > .second-container:nth-child(4) , .container-latest-products-title__second-container-mid{
+		max-width: 440px;
 	}
 
 	.container-all-products{
@@ -2773,6 +2906,21 @@ a{
 
 	.total-container-selected-designer-of-the-week .container-show-product__container-sales-information , .total-container-selected-designer-of-the-week .container-show-product:hover .container-show-product__container-sales-information { 
 		top: 306px;
+	}
+
+	.container-footer-top__total-container-left {
+		width: calc(100% - 1.88rem);
+		margin: 0 .94rem;
+	}
+
+	.container-footer-top__total-container-left__container-top {
+		flex-direction: column;
+	}
+
+	.container-footer-top__total-container-left__container-top a{
+		margin-top: .94rem;
+		width: 100%;
+		text-align: center;
 	}
 }
 
