@@ -2031,6 +2031,94 @@ footer{
 
 /* finish footer top */
 
+/* start container footer mid */
+
+.total-container-footer-mid{
+	padding: 3.12rem 0 1.88rem ;
+	display: flex;
+	align-items: center;
+}
+
+.container-footer__container-informations{
+	background-image: linear-gradient(180deg,#ffcf69,#f9c659);
+    box-shadow: 0 5px 35px rgb(255 207 105 / 51%);
+    border-radius: var(--radius);
+	color: #fff;
+	display: flex;
+}
+
+.container-footer__container-informations div{
+	padding: 1.75rem 2.75rem;
+	text-align: center;
+	font-size: .8rem;
+}
+
+.container-footer__container-informations span{
+	display: block;
+}
+
+.container-footer__container-informations div span:first-child{
+	font-size: 1.4rem;
+    font-weight: 500;
+	margin-bottom: .94rem;
+}
+
+.total-container-footer__container-communications{
+	margin-right: 1.88rem;
+}
+
+.total-container-footer__container-communications h6{
+	text-align: center;
+    margin-bottom: 1.25rem;
+	color: #545454;
+}
+
+.container-footer__container-communications{
+	display: grid;
+	grid-template-columns: repeat(5 , 3.3rem);
+	column-gap: .3rem;
+}
+
+.container-footer__container-communication{
+	background: #fff;
+    color: #212529;
+	padding: 16px;
+    font-size: 1.25rem;
+    box-shadow: 0 .19rem .63rem rgb(173 188 200 / 22%);
+    border-radius: var(--radius);
+	text-align: center;
+	cursor: pointer;
+}
+
+.container-footer__container-communication a{
+    color: #212529;
+}
+
+.container-footer__container-communication--instagram {
+    background-image: linear-gradient(30deg,#db9439,#fe5b84 58%);
+}
+
+.container-footer__container-communication--telegram {
+	background-image: linear-gradient(to bottom left,#67c9f5,#67c9f5);
+}
+
+.container-footer__container-communication--instagram a , .container-footer__container-communication--telegram a{
+	color: #fff;
+}
+
+.container-footer__container-communication--instagram span , .container-footer__container-communication--telegram span{
+	font-size: .94rem;
+	display: none;
+}
+
+.container-footer-sama-img{
+	width: 33.3%;
+	text-align: center;
+	margin-top: 1.25rem;
+}
+
+/* finish container footer mid */
+
 /* start footer bottom */
 
 .container-footer-bottom{
@@ -2357,12 +2445,37 @@ footer{
 	}
 
 	.container-footer-top__container-menus , .container-footer-top__total-container-left{
-		width: 100%;
+		width: calc(100% - 3rem);
+		margin: 0 1.5rem;
 	}
 
 	.container-footer-menu {
 		margin : 2rem 0 1.25rem;
 		box-shadow: none;
+	}
+
+	.total-container-footer-mid{
+		flex-wrap: wrap;
+	}
+
+	.container-footer__container-informations div {
+		padding: 1.75rem 2.3rem;
+	}
+	
+	.total-container-footer__container-communications {
+		margin-right: 1.7rem;
+	}
+
+	.container-footer__container-communications {
+		grid-template-columns: repeat(2 , max-content) repeat(3 , 3.26rem);
+	}
+
+	.container-footer__container-communication--instagram span , .container-footer__container-communication--telegram span{
+		display: inline;
+	}
+
+	.total-container-footer-mid .container-footer-sama-img{
+		width: 100%;
 	}
 
 }
@@ -2555,6 +2668,28 @@ footer{
 	.container-widget:last-child{
 		width: 100%;
 	}
+
+	.total-container-footer-mid div{
+		width: 100%;
+	}
+
+	.container-footer__container-informations {
+		justify-content: center;
+	}
+
+	.container-footer__container-informations div{
+		width: fit-content;
+		padding: 2.8rem 2.3rem ;
+	}
+
+	.total-container-footer__container-communications {
+		margin: 1.25rem 0 0;
+	}
+
+	.container-footer__container-communications {
+		justify-content: center;
+	}
+
 }
 
 @media (max-width : 767px){
@@ -2782,9 +2917,8 @@ footer{
 		margin: 0 0 1.25rem;
 	}
 
-	.container-footer-top__total-container-left {
-		width: calc(100% - 3rem);
-		margin: 0 1.5rem;
+	.container-footer__container-informations div {
+		padding: 1.75rem 2.3rem;
 	}
 
 }
@@ -2849,6 +2983,22 @@ footer{
 	.container-latest-products-title__container-left__under-menu{
 		right: -184px;
 	}
+}
+
+@media (max-width:500px){
+	.container-footer__container-informations{
+		flex-wrap: wrap;
+	}
+
+	.container-footer__container-informations div{
+		width: 50%;
+	}
+
+	.container-footer__container-informations div:last-child{
+		width: 100%;
+
+	}
+
 }
 
 @media (max-width : 480px){
@@ -2956,6 +3106,15 @@ footer{
 		margin-top: .94rem;
 		width: 100%;
 		text-align: center;
+	}
+
+	.container-footer__container-informations div{
+		width: 100%;
+	}
+
+	.container-footer__container-communications {
+		grid-template-columns: 1fr;
+		row-gap: 0.5rem;
 	}
 }
 
